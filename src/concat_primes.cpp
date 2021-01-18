@@ -53,6 +53,13 @@ int main(int argc, char *argv[]){
         cout<<"Unit Test 2 passed\n";
         
         //Please add 3 more unit test here/
+        assert(get_slice_of_5(concat_primes, 9) == "71923");
+        cout<<"Unit Test 3 passed\n";
+        assert(get_slice_of_5(concat_primes, 130) == "25125");
+        cout<<"Unit Test 4 passed\n";
+        assert(get_slice_of_5(concat_primes, 998) == "91");
+        cout<<"Unit Test 5 passed\n";
+        
     } else{
         cout<< "Please input n: ";
         while(std::cin >> n)
