@@ -1,15 +1,21 @@
 /** 
     @mainpage Concat Primes
 
-    @author Author
+    @author Dante D'Onofrio and Tessa Hartmann
 
-    What does this program do in short? Perhaps the name of the project goes here?
+    Homework 2 - Prime Number Generator
 */
 
 /** \file concat_primes.cpp
-    \brief Brief explanation...
+    \brief Figures a number 'n' that is a starting position on a
+    list of prime numbers and outputs 5 digits of that list.
     
-    Long explination goes here...
+    Main tests the program before output of initial prompt,then asks the user
+    for integer 'n'. The program then runs function get_concatenated_primes,
+    which calculates all prime numbers between 0 - 1000 and returns the 
+    accumulated object of strings. Then the second program runs get_slice_of_5 
+    which takes the index and a length of five digits and returns just the 
+    subsection to main before the output of the final five digits.
 
     Requires: C++11
 */
@@ -19,9 +25,18 @@
 #include<string>
 
 
-/** \brief Brief function explaination
-   
-   And a long one...
+/** \brief The first function uses a loops and a boolean expression to 
+   create a list of prime numbers. The second function uses a substring 
+   to print the wanted 5 digits. 
+ 
+   The first function 
+ 
+ 
+   The second function uses the concept and string function called substr, ie. substring.
+   "Get slice of 5" as it is named will aid in returning the 5 digits. These 5 digits
+   begin at the user entered index ("Please enter n = ") and will end after the 5th digit
+   from that given index. This is done using the parameters (index, 5) in "ret = primes.sub
+   str(index, 5);". Ret is then returned to print those 5 digits.
 
     @return std::string
 */
