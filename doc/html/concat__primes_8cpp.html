@@ -30,6 +30,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
   </div>
@@ -51,6 +52,9 @@
 <div class="title">concat_primes.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>string manipulation using .substr  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;assert.h&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
@@ -58,13 +62,20 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aaabbee5149f819a98cbe405b170253a6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concat__primes_8cpp.html#aaabbee5149f819a98cbe405b170253a6">get_concatenated_primes</a> ()</td></tr>
+<tr class="memdesc:aaabbee5149f819a98cbe405b170253a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to count all prime numbers 0-1000.  <a href="#aaabbee5149f819a98cbe405b170253a6">More...</a><br/></td></tr>
 <tr class="separator:aaabbee5149f819a98cbe405b170253a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8549564ff3a297fa08604290656c0a0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concat__primes_8cpp.html#ae8549564ff3a297fa08604290656c0a0">get_slice_of_5</a> (const std::string &amp;primes, const int index)</td></tr>
+<tr class="memdesc:ae8549564ff3a297fa08604290656c0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take section of prime numbers.  <a href="#ae8549564ff3a297fa08604290656c0a0">More...</a><br/></td></tr>
 <tr class="separator:ae8549564ff3a297fa08604290656c0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concat__primes_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">main function used for testing and prompt  <a href="#a0ddf1224851353fc92bfbff6f499fa97">More...</a><br/></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>string manipulation using .substr </p>
+<p>main tests the program before output of initial prompt, then asks for integer n program then runs function get_concatenated_primes, which calculates all prime numbers between 0 - 1000 and returns the accumulated object of strings then program runs get_slice_of_5 which takes the index and a length of five and returns just the subsection to main before output of the final five digits and prompts for more input</p>
+<p>Requires: C++11 </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aaabbee5149f819a98cbe405b170253a6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -77,6 +88,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to count all prime numbers 0-1000. </p>
+<p>get_concatenated_primes:</p>
+<p>First for loop itterates from 2 to 2000 by 1 each time and second for loop does the same. Boolean true and false used to test the value for prime or not prime. if i % j == 0 || i == j makes sure the number is not prime then if prime == true and i is not 1, number is prime. accumulation made simple by use of substr and to_string command. then the function returns accumulated substr to main.</p>
+<dl class="section return"><dt>Returns</dt><dd>std::string concat_primes.substr(0,1000) </dd></dl>
 
 <p>Referenced by <a class="el" href="concat__primes_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
 
@@ -106,6 +122,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Function to take section of prime numbers. </p>
+<p>get_slice_of_5:</p>
+<p>The second function uses the concept and string function called substr, ie. substring. "Get slice of 5" as it is named will aid in returning the 5 digits. These 5 digits begin at the user entered index ("Please enter n = ") and will end after the 5th digit from that given index. This is done using the parameters (index, 5) in "ret = primes.sub str(index, 5);". Ret is then returned to print those 5 digits.</p>
+<dl class="section return"><dt>Returns</dt><dd>std::string ret </dd></dl>
+
 <p>Referenced by <a class="el" href="concat__primes_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
 
 </div>
@@ -133,6 +154,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>main function used for testing and prompt </p>
+<p>main:</p>
+<p>added tests 3-5 to main as outlined in project details.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
 
 <p>References <a class="el" href="concat__primes_8cpp.html#aaabbee5149f819a98cbe405b170253a6">get_concatenated_primes()</a>, and <a class="el" href="concat__primes_8cpp.html#ae8549564ff3a297fa08604290656c0a0">get_slice_of_5()</a>.</p>
 
