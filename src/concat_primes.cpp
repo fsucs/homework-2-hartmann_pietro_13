@@ -19,30 +19,7 @@
 #include <assert.h>
 #include<string>
 
-/*
-   \brief 2 functions both gathering and sending info to main.
 
-   get_concatenated_primes:
-
-   First for loop itterates from 2 to 2000 by 1 each time and second for 
-   loop does the same. The Boolean true and false used to test the value 
-   for prime or not prime. If i % j == 0 || i == j makes sure the number 
-   is not prime then if prime == true and i is not 1, number is prime.
-   accumulation made simple by use of substr and to_string command.
-   Then the function returns accumulated substr to main.
-
-   get_slice_of_5:
-
-   The second function uses the concept and string function called substr, 
-   ie. substring. "Get slice of 5" as it is named will aid in returning 
-   the 5 digits. These 5 digits begin at the user entered index ("Please 
-   enter n = ") and will end after the 5th digit from that given index.
-   This is done using the parameters (index, 5) in "ret = primes.sub str
-   (index, 5);". Ret is then returned to print those 5 digits from index
-   to 5th digit after.
-
-    @return std::string
-*/
 
 std:: string get_concatenated_primes()
 {
@@ -77,6 +54,16 @@ std:: string get_slice_of_5(const std:: string &primes, const int index)
 
     return ret;
 }
+
+/**
+   \brief main function used for testing and prompt
+
+   main:
+
+   added tests 3-5 to main as outlined in project details.
+
+    @return 0
+*/
 
 int main(int argc, char *argv[])
 {
