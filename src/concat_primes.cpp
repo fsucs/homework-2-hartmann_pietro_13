@@ -1,16 +1,22 @@
 /*
     @mainpage Concat Primes
     @author Dante D'Onofrio, Tessa Hartman
-    Figures a number n that is a starting position on a list of prime numbers and outputs 5 digits of that list.
+    
+    Figures a number n that is a starting position on a list of prime 
+    numbers and outputs 5 digits of that list.
 */
 
 /*
     \file concat_primes.cpp
-    \brief string manipulation using .substr
+    \brief String manipulation using the keyword .substr.
 
-    main tests the program before output of initial prompt, then asks for integer n
-    program then runs function get_concatenated_primes, which calculates all prime numbers between 0 - 1000 and returns the accumulated object of strings
-    then program runs get_slice_of_5 which takes the index and a length of five and returns just the subsection to main before output of the final five digits and prompts for more input
+    Main tests the program before output of initial prompt, then asks 
+    for integer 'n', the program then runs function get_concatenated
+    _primes, which calculates all prime numbers between 0 - 1000 and 
+    returns the accumulated object of strings then program runs get_
+    slice_of_5 which takes the index and a length of five and returns 
+    just the subsection to main before output of the final five digits 
+    and prompts for more input. 
 
     Requires: C++11
 */
@@ -24,19 +30,22 @@
 
    get_concatenated_primes:
 
-   First for loop itterates from 2 to 2000 by 1 each time and second for loop does the same.
-   Boolean true and false used to test the value for prime or not prime.
-   if i % j == 0 || i == j makes sure the number is not prime then if prime == true and i is not 1, number is prime.
+   First for loop itterates from 2 to 2000 by 1 each time and second for 
+   loop does the same. The Boolean true and false used to test the value 
+   for prime or not prime. If i % j == 0 || i == j makes sure the number 
+   is not prime then if prime == true and i is not 1, number is prime.
    accumulation made simple by use of substr and to_string command.
-   then the function returns accumulated substr to main.
+   Then the function returns accumulated substr to main.
 
    get_slice_of_5:
 
-   The second function uses the concept and string function called substr, ie. substring.
-   "Get slice of 5" as it is named will aid in returning the 5 digits.
-   These 5 digits begin at the user entered index ("Please enter n = ") and will end after the 5th digit from that given index.
-   This is done using the parameters (index, 5) in "ret = primes.sub str(index, 5);".
-   Ret is then returned to print those 5 digits.
+   The second function uses the concept and string function called substr, 
+   ie. substring. "Get slice of 5" as it is named will aid in returning 
+   the 5 digits. These 5 digits begin at the user entered index ("Please 
+   enter n = ") and will end after the 5th digit from that given index.
+   This is done using the parameters (index, 5) in "ret = primes.sub str
+   (index, 5);". Ret is then returned to print those 5 digits from index
+   to 5th digit after.
 
     @return std::string
 */
@@ -90,15 +99,6 @@ int main(int argc, char *argv[])
         assert(get_slice_of_5(concat_primes, 6) == "13171");
         cout<<"Unit Test 2 passed\n";
 
-        //Please add 3 more unit test here/
-        assert(get_slice_of_5(concat_primes, 9) == "71923");
-        cout<<"Unit Test 3 passed\n";
-
-        assert(get_slice_of_5(concat_primes, 130) == "25125");
-        cout<<"Unit Test 4 passed\n";
-
-        assert(get_slice_of_5(concat_primes, 998) == "91");
-        cout<<"Unit Test 5 passed\n";
     }
     else
     {
